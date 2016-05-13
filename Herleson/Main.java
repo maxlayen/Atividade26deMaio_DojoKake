@@ -1,5 +1,12 @@
 public class Main {
 
+<<<<<<< HEAD
+=======
+//Q1 - Eduardo Julien e Pedro Elpídio
+//Q3 - Luis Guilherme, Guilherme Feitosa (Editada por José Vitor)
+//Q4 - Matheus da Silva, José Vitor
+//Q5 - Eduardo Julien, Pedro Elpídio
+>>>>>>> origin/master
 //Q2, Q6 e Q08 - Emmanuel de Sousa, Paulo Arthur
 
   public static void main (String args[]){
@@ -29,14 +36,102 @@ public class Main {
 		    System.out.println("5 – Finalizar o programa");
 
 	  }
+<<<<<<< HEAD
 
 	  //0Q6
+=======
+	
+	//Q03                                                             
+	static Candidato[][] adicionarCandidato(Candidato matriz[][]) {  
+		Candidato candidato = new Candidato();                       
+		Scanner s = new Scanner(System.in);                          
+                                                                     
+		for (int i = 0; i < matriz.length; i++) {                    
+			for (int j = 0; j < matriz.length; j++) {                
+				System.out.println("Insira a matrícula do candidato"); //José Vitor
+				candidato.matricula = s.nextInt(); //José Vitor
+				System.out.println("Insira o nome do candidato: ");  
+				candidato.nome = s.nextLine();                       
+				System.out.println("Insira qual seu semestre: ");    
+				candidato.semestre = s.nextInt();                    
+				System.out.println("Insira seu email");              
+				candidato.email = s.nextLine();	                     
+			System.out.println("Digite seu telefone");               
+			candidato.telefone = s.next();                           
+			candidato.whatsapp = s.nextBoolean();                    
+		}}                                                           
+		return matriz;                                               
+	}    
+	
+	// Q4
+	static void ordenar(Candidato candidatos[][]){
+	int menor; 
+	int pos;
+	for (int i = 0; i < candidatos.length; i++) {
+		menor = candidatos[i][0];
+		pos = i;
+		
+		for (int j = 0; j < candidatos.length; j++) {
+			
+			if (candidatos[i][0] < menor){
+				menor = candidatos[i];
+				pos = j;
+		}	
+		}
+		candidatos[pos] = candidatos[i];
+		candidatos[i] = menor;
+	}
+	}
+	
+	//Q5
+	public boolean verificarNumero(String codigo){
+		Candidato candidato = new Candidato();
+		Scanner teclado = new Scanner (System.in);
+		int n;
+		System.out.println("iNFORME O NUMERO DE CANDIDATOS");
+		n = teclado.nextInt();
+		Candidato vetorcandidatos[] = new Candidato [n];
+		for (int i = 0; i < vetorcandidatos.length; i++) {
+			if(codigo.equals(vetorcandidatos[i].codigoinscrito)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		return false;
+	}
+	
+	
+	
+	  //Q6
+>>>>>>> origin/master
     public static String mostrarSeletivo(){
 		    String explicacao = "O processo seletivo da MyProject é composto por 3 fases: \nA primeira delas é a inscrição, onde o candidato deve informar seus dados básicos acerca da universidade e informações de contato. \nA segunda é a dinâmica em grupo, onde os participantes são divididos em grupos e deverão realizar atividades propostas pelos avaliadores, a fim de avaliar seu comportamento em equipe. \nA terceira são as entrevistas individuais, onde os inscritos vão ser chamados em particular para conversar sobre seus interesses em participar, suas aspirações e outras perguntas para uma final avaliação no processo de seleção.";
 
 		    return explicacao;
     }
+<<<<<<< HEAD
 
+=======
+    
+    //Q7
+    static int ordenarAprovados(Candidato candidatos[][]){
+	Scanner s = new Scanner(System.in);
+	int aprovados = 0;
+	boolean aprovado = true;
+	for (int i = 0; i < candidatos.length; i++) {
+			System.out.printf("Informe se o aluno %s foi aprovado.", candidatos[i][1]);
+			aprovado = s.nextBoolean();
+			if(aprovado)
+				aprovados++;
+	}
+	System.out.printf("Foram aprovados %d alunos.", aprovados);
+	
+	return aprovados;
+}
+    
+    
+>>>>>>> origin/master
     //Q08
     public static void terminar(){
 		    System.exit(0);
