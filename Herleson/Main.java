@@ -1,6 +1,7 @@
 public class Main {
 
 //Q3 - Luis Guilherme, Guilherme Feitosa
+//Q4 - Matheus da Silva, José Vitor
 //Q2, Q6 e Q08 - Emmanuel de Sousa, Paulo Arthur
 
 
@@ -59,7 +60,29 @@ public class Main {
 			candidato.whatsapp = s.nextBoolean();                    
 		}}                                                           
 		return matriz;                                               
-	}                                                                
+	}    
+	
+	// Q4
+	static void ordenar(Candidato candidatos[][]){
+	int menor; 
+	int pos;
+	for (int i = 0; i < candidatos.length; i++) {
+		menor = candidatos[i][0];
+		pos = i;
+		
+		for (int j = 0; j < candidatos.length; j++) {
+			
+			if (candidatos[i][0] < menor){
+				menor = candidatos[i];
+				pos = j;
+		}	
+		}
+		candidatos[pos] = candidatos[i];
+		candidatos[i] = menor;
+	}
+	}
+	
+	}
 	
 	  //0Q6
     public static String mostrarSeletivo(){
