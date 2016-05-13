@@ -1,8 +1,9 @@
 public class Main {
 
-//Q3 - Luis Guilherme, Guilherme Feitosa
+//Q1 - Eduardo Julien e Pedro Elpídio
+//Q3 - Luis Guilherme, Guilherme Feitosa (Editada por José Vitor)
 //Q4 - Matheus da Silva, José Vitor
-//Q5 - Eduardo Julien, Pedro Elpidio
+//Q5 - Eduardo Julien, Pedro Elpídio
 //Q2, Q6 e Q08 - Emmanuel de Sousa, Paulo Arthur
 
 
@@ -50,6 +51,8 @@ public class Main {
                                                                      
 		for (int i = 0; i < matriz.length; i++) {                    
 			for (int j = 0; j < matriz.length; j++) {                
+				System.out.println("Insira a matrícula do candidato"); //José Vitor
+				candidato.matricula = s.nextInt(); //José Vitor
 				System.out.println("Insira o nome do candidato: ");  
 				candidato.nome = s.nextLine();                       
 				System.out.println("Insira qual seu semestre: ");    
@@ -109,6 +112,23 @@ public class Main {
 		
 		    return explicacao;
     }
+    
+    //Q7
+    static int ordenarAprovados(Candidato candidatos[][]){
+	Scanner s = new Scanner(System.in);
+	int aprovados = 0;
+	boolean aprovado = true;
+	for (int i = 0; i < candidatos.length; i++) {
+			System.out.printf("Informe se o aluno %s foi aprovado.", candidatos[i][1]);
+			aprovado = s.nextBoolean();
+			if(aprovado)
+				aprovados++;
+	}
+	System.out.printf("Foram aprovados %d alunos.", aprovados);
+	
+	return aprovados;
+}
+    
     
     //Q08
     public static void terminar(){
