@@ -1,5 +1,8 @@
 public class Main {
 
+//Q2, Q6 e Q08 - Emmanuel de Sousa, Paulo Arthur
+
+
   public static void main (String args[]){
     Scanner s = new Scanner(System.in);
 		
