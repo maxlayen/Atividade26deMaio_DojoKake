@@ -2,6 +2,7 @@ public class Main {
 
 //Q3 - Luis Guilherme, Guilherme Feitosa
 //Q4 - Matheus da Silva, José Vitor
+//Q5 - Eduardo Julien, Pedro Elpidio
 //Q2, Q6 e Q08 - Emmanuel de Sousa, Paulo Arthur
 
 
@@ -82,9 +83,27 @@ public class Main {
 	}
 	}
 	
+	//Q5
+	public boolean verificarNumero(String codigo){
+		Candidato candidato = new Candidato();
+		Scanner teclado = new Scanner (System.in);
+		int n;
+		System.out.println("iNFORME O NUMERO DE CANDIDATOS");
+		n = teclado.nextInt();
+		Candidato vetorcandidatos[] = new Candidato [n];
+		for (int i = 0; i < vetorcandidatos.length; i++) {
+			if(codigo.equals(vetorcandidatos[i].codigoinscrito)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		return false;
 	}
 	
-	  //0Q6
+	
+	
+	  //Q6
     public static String mostrarSeletivo(){
 		    String explicacao = "O processo seletivo da MyProject é composto por 3 fases: \nA primeira delas é a inscrição, onde o candidato deve informar seus dados básicos acerca da universidade e informações de contato. \nA segunda é a dinâmica em grupo, onde os participantes são divididos em grupos e deverão realizar atividades propostas pelos avaliadores, a fim de avaliar seu comportamento em equipe. \nA terceira são as entrevistas individuais, onde os inscritos vão ser chamados em particular para conversar sobre seus interesses em participar, suas aspirações e outras perguntas para uma final avaliação no processo de seleção.";
 		
