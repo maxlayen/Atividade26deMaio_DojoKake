@@ -1,31 +1,38 @@
 public class Main {
 
-<<<<<<< HEAD
-=======
 //Q1 - Eduardo Julien e Pedro Elpídio
 //Q3 - Luis Guilherme, Guilherme Feitosa (Editada por José Vitor)
 //Q4 - Matheus da Silva, José Vitor
 //Q5 - Eduardo Julien, Pedro Elpídio
->>>>>>> origin/master
 //Q2, Q6 e Q08 - Emmanuel de Sousa, Paulo Arthur
 
-  public static void main (String args[]){
-    Scanner s = new Scanner(System.in);
 
-
+	  public static void main (String args[]){
+		 Scanner s = new Scanner(System.in);
+		
+		
+		Candidato candidato = new Candidato ();           
+		Candidato  matrizdados[][] = new Candidato[5][6]; 
+		Scanner s = new Scanner(System.in);               
+		int escolha=s.nextInt();                          
+		menu(escolha);                                    
+		if(escolha == 1){                                 
+		adicionarCandidato(matrizdados);             
+		}
+		
 		mostrarMenu(s);
 		System.out.println(mostrarSeletivo());
-		terminar();
+		
 
-
+		
 	}
-
+	
 	  //Q02
-		public static void mostrarMenu(Scanner s){
+	public static void mostrarMenu(Scanner s){
 	    	int opcao;
-
+		
     		System.out.println("Informe a opção desejada de acordo com o menu: \n");
-
+		
 		    System.out.println("­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
 		    System.out.println("MyProject – Seleção de Candidatos");
 		    System.out.println("­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
@@ -34,12 +41,8 @@ public class Main {
 		    System.out.println("3 ­ Fases");
 		    System.out.println("4 – Mostrar quantidade de candidatos aprovados");
 		    System.out.println("5 – Finalizar o programa");
-
+		
 	  }
-<<<<<<< HEAD
-
-	  //0Q6
-=======
 	
 	//Q03                                                             
 	static Candidato[][] adicionarCandidato(Candidato matriz[][]) {  
@@ -104,15 +107,11 @@ public class Main {
 	
 	
 	  //Q6
->>>>>>> origin/master
     public static String mostrarSeletivo(){
 		    String explicacao = "O processo seletivo da MyProject é composto por 3 fases: \nA primeira delas é a inscrição, onde o candidato deve informar seus dados básicos acerca da universidade e informações de contato. \nA segunda é a dinâmica em grupo, onde os participantes são divididos em grupos e deverão realizar atividades propostas pelos avaliadores, a fim de avaliar seu comportamento em equipe. \nA terceira são as entrevistas individuais, onde os inscritos vão ser chamados em particular para conversar sobre seus interesses em participar, suas aspirações e outras perguntas para uma final avaliação no processo de seleção.";
-
+		
 		    return explicacao;
     }
-<<<<<<< HEAD
-
-=======
     
     //Q7
     static int ordenarAprovados(Candidato candidatos[][]){
@@ -131,7 +130,6 @@ public class Main {
 }
     
     
->>>>>>> origin/master
     //Q08
     public static void terminar(){
 		    System.exit(0);
