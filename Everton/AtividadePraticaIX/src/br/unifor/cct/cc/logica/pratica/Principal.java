@@ -3,14 +3,20 @@ package br.unifor.cct.cc.logica.pratica;
 import java.util.Scanner;
 
 public class Principal {
+	
 	public static int numeroInscricao = 0;
+	
 	public static void main(String[] args) {
 		Candidato [][] candidatos = new Candidato[4][5];	
 		
 		int opcao = 0;
+		
+		// Condição para Encerrar o programa.
 		while (opcao!=5) {
 		opcao = menu(candidatos,opcao);
 		
+			// As demais funções não estão sendo chamadas de acordo com o exercício
+			// O código deve estar funcional.
 			switch (opcao) {
 			case 1:
 				adicionarCandidato(candidatos);
@@ -27,14 +33,14 @@ public class Principal {
 
 	}
 
-	// Q02
+	// Questão 02 - Davi Melo / Augusto Cesar
 	public static int menu(Candidato[][] candidato,int opcao){
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("------------------------");	 
-		System.out.println("My Project-Sele��o de candidatos");
+		System.out.println("My Project-Seleção de candidatos");
 		System.out.println("------------------------");	
-		System.out.println("1 � Adicionar candidato");
-		System.out.println("2 � Verificar exist�ncia do candidato");
+		System.out.println("1 – Adicionar candidato");
+		System.out.println("2 – Verificar existência do candidato");
 		System.out.println("3 - Fases");
 		System.out.println("4 - Mostrar quantidade de candidatos aprovados");
 		System.out.println("5 - Finalizar o programa");
@@ -44,7 +50,7 @@ public class Principal {
 		return opcao;
 	}
 
-	// Q03
+	// Questão 03 - Takeshi / Lucas Oliveira
 	public static void adicionarCandidato(Candidato[][] candidatos) {
 
 		Scanner s = new Scanner(System.in);
@@ -77,7 +83,7 @@ public class Principal {
 		telefone = s.nextLine();
 		candidato.setTelefone(telefone);
 
-		System.out.println("Informe se o candidato tem Whatsapp(True para sim e false para n�o): ");
+		System.out.println("Informe se o candidato tem Whatsapp(True para sim e false para não): ");
 		whatsapp = s.nextBoolean();
 		candidato.hasWhatsapp();
 
@@ -93,7 +99,7 @@ public class Principal {
 		}	
 	}
 
-	// Q04
+	// Questão 04 - Luigi / Isis
 	public static Candidato[][] OrdenarInscricao(Candidato[][] candidatos){
 		for (int i = 0; i < candidatos.length; i++) {
 			for (int j = 1; j < candidatos.length; j++) {
@@ -120,12 +126,12 @@ public class Principal {
 
 		return candidatos;
 	}
-	//Q5
+	//Questão 05 - Lucas Frota / Antonio Kevin
 	public static boolean verificarCandidato(int codigoInscricao,Candidato[][] candidatos){
 		boolean alunoExiste = false;
 		Scanner scanner = new Scanner(System.in);
 		int codigo;
-		System.out.println("Informe um c�digo de inscri��o.");
+		System.out.println("Informe um código de inscrição.");
 		codigo = scanner.nextInt();
 
 		for (int i = 0; i < candidatos.length; i++) {
@@ -145,4 +151,26 @@ public class Principal {
 
 		return alunoExiste;
 	}
+	
+	// Questão 06 - Pedro Henrique / Daniel Dantas
+	// TODO 
+	
+	
+	// Questão 07 - Nicolas / Max
+	public static int alunosAprovados(String [] candidatos){
+		int aprovados = 0;
+		for (int i = 0; i < candidatos.length; i++) {
+			for (int j = 0; j < candidatos.length; j++) {
+				System.out.println("Informe se o candidato["+(i+1)+"]["+(j+1)+"] foi aprovado");
+				aprovados = scan.nextBoolean();
+				if(aprovados){
+					alunosAprovados++;
+				}
+			}
+
+			return alunosAprovados;
+		}
+	}
+	
+	// Questão 08 - Francisco Olímpio / Gabriel Albuquerque
 }
