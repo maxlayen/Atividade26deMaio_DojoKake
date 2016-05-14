@@ -160,21 +160,25 @@ public class Principal {
 	// TODO 
 	
 	
-	// Questão 07 - Nicolas / Max
-	public static int alunosAprovados(String [] candidatos){
-		int aprovados = 0;
-		for (int i = 0; i < candidatos.length; i++) {
-			for (int j = 0; j < candidatos.length; j++) {
-				System.out.println("Informe se o candidato["+(i+1)+"]["+(j+1)+"] foi aprovado");
-				aprovados = scan.nextBoolean();
-				if(aprovados){
-					alunosAprovados++;
+	// Questão 7 Nícolas e Max
+		public static int alunosAprovados(Candidato [] candidatos){
+			Scanner s = new Scanner(System.in);
+		
+			int aprovados = 0;
+			for (int i = 0; i < candidatos.length; i++) {
+				for (int j = 0; j < 5; j++) {
+					System.out.printf("O aluno %d foi aprovado? Responda 'sim' ou 'não'. ", candidatos[i][j].getCodigoInscricao());
+					String aprovado = s.next();
+					if (aprovado.equalsIgnoreCase("sim")){
+						aprovados++;						
+					}
+					
+					
+					}
 				}
+	
+				return aprovados;
 			}
-
-			return alunosAprovados;
-		}
-	}
 	
 	// Questão 08 - Francisco Olímpio / Gabriel Albuquerque
 	public static void finalizaPrograma(){
