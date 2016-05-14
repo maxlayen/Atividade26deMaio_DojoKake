@@ -155,9 +155,10 @@ public class Principal {
 
 		return alunoExiste;
 	}
-	
-	// Questão 06 - Pedro Henrique / Daniel Dantas
-	// TODO 
+	// Questão 6 Maxwell
+		public static String explicarFases(){
+			return "Explicação fase1, 2 e 3.";			
+		}
 	
 	
 	// Questão 7 Nícolas e Max
